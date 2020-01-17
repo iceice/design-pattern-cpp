@@ -1,22 +1,8 @@
----
-title: 每日一个设计模式之策略模式
-comments: true
-mathjax: false
-date: 2019-12-28 10:09:18
-categories:
-- 设计模式
-- 技术笔记
-tags:
-- 设计模式
----
-
 > Strategy Pattern 策略模式，属于行为型模式。策略对应到计算机的世界当中就是算法，所以策略模式就是对算法的封装，把一系列的算法分别封装到对应的类中，使他们可以相互替换。
-
-<!-- more -->
 
 ### 1. UML图
 
-![Strategy](每日一个设计模式之策略模式/Strategy.png)
+![Strategy](Strategy.png)
 
 通过上面的图，我们可以通过 Context 类的构造函数传参，调用 StrategyA、StrategyB、StrategyC 三种策略（算法）。定义了 `Strategy` 基类，通过虚函数继承的方式实现了多态。
 

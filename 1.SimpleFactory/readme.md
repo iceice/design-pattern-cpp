@@ -1,3 +1,5 @@
+> Simple Factory Pattern 简单工厂模式，属于创建型模式。顾名思义，工厂就是负责制造物品的，在面向对象的世界里，工厂自然就是生产对象、创造对象的。根据参数的不同返回不同类的实例。
+
 ### 1. UML图
 
 ![SimpleFactory](SimpleFactory.png)

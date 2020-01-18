@@ -3,13 +3,15 @@
 
 #include <stdexcept>
 
-class Operation {
+class Operation
+{
 public:
-    Operation() : _number_a(0), _number_b(0) { };
+    Operation() : _number_a(0), _number_b(0){};
 
-    ~Operation();
+    virtual ~Operation();
 
-    void set(double a, double b) {
+    void set(double a, double b)
+    {
         _number_a = a;
         _number_b = b;
     }
@@ -21,42 +23,46 @@ protected:
     double _number_b;
 };
 
-
 // Add
-class OperationAdd : public Operation {
+class OperationAdd : public Operation
+{
 public:
-    double GetResult() {
+    double GetResult()
+    {
         return _number_a + _number_b;
     }
 };
 
-
 // Sub
-class OperationSub : public Operation {
+class OperationSub : public Operation
+{
 public:
-    double GetResult() {
+    double GetResult()
+    {
         return _number_a - _number_b;
     }
 };
 
-
 // Multiplication
-class OperationMul : public Operation {
+class OperationMul : public Operation
+{
 public:
-    double GetResult() {
+    double GetResult()
+    {
         return _number_a * _number_b;
     }
 };
 
-
 //
-class OperationDiv : public Operation {
+class OperationDiv : public Operation
+{
 public:
-    double GetResult() {
-        if (_number_b == 0) 
+    double GetResult()
+    {
+        if (_number_b == 0)
             throw std::runtime_error("Math error: Attempted to divide by Zero\n");
         return _number_a / _number_b;
     }
 };
 
-#endif  // _OPERATION_H_H
+#endif // _OPERATION_H_H
